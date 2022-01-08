@@ -1,4 +1,6 @@
-import 'package:av_model/Screens/Constants/colors.dart';
+import 'package:av_model/Screens/Satt%20UI/Dashborad%20page/dashboard_page.dart';
+import 'package:av_model/Screens/Satt%20UI/navigation_page.dart';
+import 'package:av_model/Widgets/Constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -145,7 +147,10 @@ class _LoginPage extends State<LoginPage> {
                       width: 282,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(primary: ButtonColor),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push( context, MaterialPageRoute(
+                                builder: (context) =>  HomePage()));
+                          },
                           child: const Text("Log in")),
                     ),
                     const SizedBox(height: 20),
