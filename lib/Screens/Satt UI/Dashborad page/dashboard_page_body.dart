@@ -1,4 +1,5 @@
 import 'package:av_model/Screens/Satt%20UI/Send%20shuttle/send_shuttle.dart';
+import 'package:av_model/Screens/Satt%20UI/Track%20shuttle/track_shuttle.dart';
 import 'package:av_model/Widgets/Constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -534,14 +535,14 @@ class _FleetManagement extends State<FleetManagement>{
                 Center(
                   child: Container(
                     height: 60,
-                    width: 144,
+                    width: 134,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black45, width: 0),
+                      border: Border.all(color: Colors.black),
                     ),
                     child:SearchChoices.single(
                       underline: DropdownButtonHideUnderline(child: Container()),
                       displayClearIcon: false,
-                      padding: 2,
+                      padding: 0,
                       items:<String>['One', 'Two', 'Free', 'Four']
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -550,8 +551,10 @@ class _FleetManagement extends State<FleetManagement>{
                         );
                       }).toList(),
                       value: dropdownValue,
-                      hint: "Select one",
-                      searchHint: "Select one",
+                      hint:const Padding(
+                          padding:EdgeInsets.symmetric(horizontal: 2,vertical: 10) ,
+                          child:Text("Select Shuttle")),
+                      searchHint: "Select Shuttle",
                       onChanged:  (String newValue) {
                         setState(() {
                           dropdownValue = newValue;
@@ -574,7 +577,7 @@ class _FleetManagement extends State<FleetManagement>{
                     height: 60,
                     width: 144,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black45, width: 0),
+                      border: Border.all(color: Colors.black),
                     ),
                     child:SearchChoices.single(
                       underline: DropdownButtonHideUnderline(child: Container()),
@@ -588,7 +591,9 @@ class _FleetManagement extends State<FleetManagement>{
                         );
                       }).toList(),
                       value: dropdownValue,
-                      hint: "Select one",
+                      hint: const Padding(
+                          padding:EdgeInsets.symmetric(horizontal: 2,vertical: 10) ,
+                          child:Text("Select Location")),
                       searchHint: "Select one",
                       onChanged:  (String newValue) {
                         setState(() {
@@ -632,7 +637,10 @@ class _FleetManagement extends State<FleetManagement>{
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push( context, MaterialPageRoute(
+                            builder: (context) =>  TrackShuttle()));
+                      },
                       style: ElevatedButton.styleFrom(primary: ButtonColor),
                       child: const Text("Track shuttle"),
                     ),
