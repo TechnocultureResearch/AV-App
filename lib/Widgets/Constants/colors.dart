@@ -6,3 +6,4 @@ const TextFieldThemeColor = Colors.black45;
 const ContainerWhite = Color(0xFFFFFFFF);
 const NavBarIconColor = Colors.grey;
 const SelectedIconColor = Colors.blue;
+const ContainerBlue = Color(0xFF222745);
