@@ -476,7 +476,8 @@ class FleetManagement extends StatefulWidget{
 }
 
 class _FleetManagement extends State<FleetManagement>{
-  String  dropdownValue;
+  String  ShuttleValue;
+  String SendtoValue;
 
   @override
   Widget build(BuildContext context) {
@@ -550,14 +551,14 @@ class _FleetManagement extends State<FleetManagement>{
                           child: Text(value),
                         );
                       }).toList(),
-                      value: dropdownValue,
+                      value: ShuttleValue,
                       hint:const Padding(
                           padding:EdgeInsets.symmetric(horizontal: 2,vertical: 10) ,
                           child:Text("Select Shuttle")),
                       searchHint: "Select Shuttle",
                       onChanged:  (String newValue) {
                         setState(() {
-                          dropdownValue = newValue;
+                          ShuttleValue = newValue;
                         });
                       },
                       isExpanded: true,
@@ -590,14 +591,14 @@ class _FleetManagement extends State<FleetManagement>{
                           child: Text(value),
                         );
                       }).toList(),
-                      value: dropdownValue,
+                      value: SendtoValue,
                       hint: const Padding(
                           padding:EdgeInsets.symmetric(horizontal: 2,vertical: 10) ,
                           child:Text("Select Location")),
                       searchHint: "Select one",
                       onChanged:  (String newValue) {
                         setState(() {
-                          dropdownValue = newValue;
+                          SendtoValue = newValue;
                         });
                       },
                       isExpanded: true,
