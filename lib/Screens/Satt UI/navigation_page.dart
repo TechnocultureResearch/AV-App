@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: ContainerWhite,
         body: _pageOptions[selectedPage],
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.dashboard_outlined,color: NavBarIconColor,size: 30),
