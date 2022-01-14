@@ -1,5 +1,7 @@
-import 'package:av_model/Screens/Login%20Page/login.dart';
+// This page navigates to different screens of app from bottom navigation bar
+
 import 'package:av_model/Screens/Satt%20UI/Dashborad%20page/dashboard_page.dart';
+import 'package:av_model/Screens/Satt%20UI/Manage%20fleet/manage_fleet.dart';
 import 'package:av_model/Widgets/Constants/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +15,10 @@ class _HomePageState extends State<HomePage> {
 
   final _pageOptions = [
     StaffDashboard(),
-    LoginPage(),
-    StaffDashboard(),
-    LoginPage(),
+    StaffDashboard(),// Import page for bookings
+    ManageFleet(),
+    StaffDashboard(),  // Import page for Settings
+
   ];
 
   @override
