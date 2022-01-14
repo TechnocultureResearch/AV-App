@@ -1,4 +1,5 @@
 import 'package:av_model/Widgets/Constants/colors.dart';
+import 'package:av_model/Widgets/Utilities/google_maps.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:search_choices/search_choices.dart';
@@ -16,6 +17,7 @@ class _SendShuttleBody extends State<SendShuttleBody>{
     return Center(
       child: Stack(
         children: [
+          Googlemaps(),
 
           // Place to add map
 
