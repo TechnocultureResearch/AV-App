@@ -1,6 +1,8 @@
+import 'package:av_model/Screens/Satt%20UI/Manage%20fleet/manage_fleet.dart';
 import 'package:av_model/Screens/Satt%20UI/Send%20shuttle/send_shuttle.dart';
 import 'package:av_model/Screens/Satt%20UI/Track%20shuttle/track_shuttle.dart';
 import 'package:av_model/Widgets/Constants/colors.dart';
+import 'package:av_model/Widgets/Utilities/google_maps.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:search_choices/search_choices.dart';
@@ -486,30 +488,36 @@ class _FleetManagement extends State<FleetManagement>{
       child: Row(
         children: <Widget>[
           const SizedBox(width: 25),
-          Container(
-            height: 302,
-            width: 194,
-            decoration: BoxDecoration(
-              color: ContainerWhite,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: Text("Manage Fleet",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16)),
-                  ),
-                  Container(
-                    width: 174,
-                    height: 252,
-                    color: ContainerWhite,
-                    //child:
+          GestureDetector(
+            onTap: (){
+              Navigator.push( context, MaterialPageRoute(
+                  builder: (context) =>  ManageFleet()));
+            },
+            child: Container(
+              height: 302,
+              width: 194,
+              decoration: BoxDecoration(
+                color: ContainerWhite,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10),
+                      child: Text("Manage Fleet",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                    ),
+                    Container(
+                      width: 174,
+                      height: 252,
+                      color: ContainerWhite,
+                      child:Googlemaps(),
 
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
