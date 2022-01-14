@@ -1,3 +1,9 @@
+/* Google map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
+   Google map Key - android > app > src>main > AndroidManifest.xml (Line no 42)
+   Google service - android > build.gradle (Line 10)
+*/
+
+
 import 'dart:async';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
