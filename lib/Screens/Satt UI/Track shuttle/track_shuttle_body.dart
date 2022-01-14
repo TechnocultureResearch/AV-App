@@ -1,7 +1,7 @@
 import 'package:av_model/Widgets/Constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:im_stepper/stepper.dart';
+//import 'package:im_stepper/stepper.dart';
 import 'dart:math' as math;
 
 class TrackShuttleBody extends StatefulWidget{
@@ -17,469 +17,10 @@ class _TrackShuttleBody extends State<TrackShuttleBody>{
      child: Column(
        crossAxisAlignment: CrossAxisAlignment.center,
        children: [
-         Padding(
-           padding: EdgeInsets.symmetric(vertical:20,horizontal: 10),
-           child: Container(
-             width: 380,
-             height: 394,
-             decoration: BoxDecoration(
-               color: ContainerWhite,
-               borderRadius: BorderRadius.circular(10),
-             ),
-             child: Column(
-               children: [
-                 //-------------------------------------------------------------
-                 Padding(
-                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                   child: Container(
-                     height: 138,
-                     width: 315,
-                     decoration: BoxDecoration(
-                       color: ContainerWhite,
-                       borderRadius: BorderRadius.circular(10),
-                     ),
-                     child:
-                     Row(
-                         mainAxisAlignment: MainAxisAlignment.start,
-                         children: [
-                           Padding(
-                               padding: const EdgeInsets.symmetric(horizontal: 20),
-                               child: Image.asset("assets/images/blue_cart.png")),
-                           Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               const SizedBox(height: 25),
-                               const Text("Green 6 seater",
-                                   style: TextStyle(
-                                       fontWeight: FontWeight.bold, fontSize: 16)),
-                               Padding(
-                                 padding:const EdgeInsets.symmetric(vertical: 5),
-                                 child: Row(
-                                     children:const[
-                                       Text("2 mins to end",
-                                           style: TextStyle(
-                                               color:Colors.blue,fontWeight: FontWeight.bold, fontSize: 20)),
+         InfoContainer1(),
+         InfoContainer2(),
+         InfoContainer1(),
 
-                                     ]
-                                 ),
-                               ),
-                               Container(
-                                 width: 117,
-                                 height: 27,
-                                 child: LinearPercentIndicator(
-                                   //width: MediaQuery.of(context).size.width - 50,
-                                   animation: true,
-                                   lineHeight: 25.0,
-                                   animationDuration: 2000,
-                                   percent: 0.6,
-                                   center: const Text("60%",
-                                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-                                   linearStrokeCap: LinearStrokeCap.roundAll,
-                                   progressColor: Colors.green,
-                                 ),
-                               ),
-                               const SizedBox(height: 5),
-                               Row(
-                                   children: [
-                                     Text("18 ",
-                                       style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-                                     Column(
-                                         children:[
-                                           Padding(
-                                             padding: EdgeInsets.symmetric(vertical: 2),
-                                             child: Text("KM left",
-                                               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                                           ),
-                                         ]
-                                     ),
-                                   ]
-                               ),
-                             ],
-                           ),
-                         ]
-                     ),
-                   ),
-                 ),
-                 //-------------------------------------------------------------
-
-                 Container(
-                 height: 160,
-                 width: 325,
-                 color:ContainerBlue,
-                   child:LocationInfo(),
-                       /* Stepper widget not working
-                       Column(
-                       children: [
-                         Padding(
-                           padding:EdgeInsets.symmetric(horizontal:10,vertical: 50),
-                           child: Transform.rotate(
-                             angle: 1.55,
-                             child: IconStepper(
-                               enableNextPreviousButtons: false,
-                               enableStepTapping: false,
-                               scrollingDisabled: true,
-                               activeStepBorderColor: ContainerBlue,
-                               activeStepBorderPadding: 0,
-                               activeStepBorderWidth: 0,
-                               activeStepColor: ContainerBlue,
-                               stepColor: ContainerBlue,
-                               lineColor: Colors.white,
-                               stepPadding: 0,
-                               lineLength: 10,
-                               icons: [
-                                 Icon(Icons.supervised_user_circle,color: Colors.white,size: 5,),
-                                 Icon(Icons.flag,color: Colors.white),
-                                 Icon(Icons.access_alarm,color: Colors.white),
-                               ],
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),*/
-                   ),
-
-                 const SizedBox(height: 10),
-
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                   children: [
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                           child:Text("Settings") ,),
-                     ),
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                         child:Text("Cancel Shuttle") ,),
-                     ),
-                   ],
-                 ),
-
-                 const SizedBox(height: 10),
-                 const Text("Requested by Room Guest- Sarthak Tiwary",
-                 style: TextStyle(fontWeight: FontWeight.bold),)
-               ],
-             ),
-           ),
-         ),
-
-         //---------------------------------------------------------------------
-
-         Padding(
-           padding: EdgeInsets.symmetric(vertical:20,horizontal: 10),
-           child: Container(
-             width: 380,
-             height: 394,
-             decoration: BoxDecoration(
-               color: ContainerWhite,
-               borderRadius: BorderRadius.circular(10),
-             ),
-             child: Column(
-               children: [
-                 //-------------------------------------------------------------
-                 Padding(
-                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                   child: Container(
-                     height: 138,
-                     width: 315,
-                     decoration: BoxDecoration(
-                       color: ContainerWhite,
-                       borderRadius: BorderRadius.circular(10),
-                     ),
-                     child:
-                     Row(
-                         mainAxisAlignment: MainAxisAlignment.start,
-                         children: [
-                           Padding(
-                               padding: const EdgeInsets.symmetric(horizontal: 20),
-                               child: Image.asset("assets/images/red_cart.png.png")),
-                           Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               const SizedBox(height: 15),
-                               const Text("Red 4 seater",
-                                   style: TextStyle(
-                                       fontWeight: FontWeight.bold, fontSize: 16)),
-                               Padding(
-                                 padding:const EdgeInsets.symmetric(vertical: 5),
-                                 child: Row(
-                                     children:const[
-                                       Text("2 mins to end",
-                                           style: TextStyle(
-                                               color:Colors.blue,fontWeight: FontWeight.bold, fontSize: 20)),
-
-                                     ]
-                                 ),
-                               ),
-                               Container(
-                                 width: 117,
-                                 height: 27,
-                                 child: LinearPercentIndicator(
-                                   //width: MediaQuery.of(context).size.width - 50,
-                                   animation: true,
-                                   lineHeight: 25.0,
-                                   animationDuration: 2000,
-                                   percent: 0.6,
-                                   center: const Text("60%",
-                                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-                                   linearStrokeCap: LinearStrokeCap.roundAll,
-                                   progressColor: Colors.green,
-                                 ),
-                               ),
-                               Padding(
-                                   padding: EdgeInsets.symmetric(vertical: 10),
-                                   child: Row(
-                                     children: [
-                                       Text("18 ",
-                                       style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-                                       Column(
-                                         children:[
-                                           Padding(
-                                           padding: EdgeInsets.symmetric(vertical: 2),
-                                           child: Text("KM left",
-                                             style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                                         ),
-                   ]
-                                       ),
-                                   ]
-                                   ),
-                           ),
-                             ],
-                           ),
-                         ]
-                     ),
-                   ),
-                 ),
-                 //-------------------------------------------------------------
-
-                 Container(
-                   height: 160,
-                   width: 325,
-                   color:ContainerBlue,
-                   child:LocationInfo2(),
-                   /* Stepper widget not working
-                       Column(
-                       children: [
-                         Padding(
-                           padding:EdgeInsets.symmetric(horizontal:10,vertical: 50),
-                           child: Transform.rotate(
-                             angle: 1.55,
-                             child: IconStepper(
-                               enableNextPreviousButtons: false,
-                               enableStepTapping: false,
-                               scrollingDisabled: true,
-                               activeStepBorderColor: ContainerBlue,
-                               activeStepBorderPadding: 0,
-                               activeStepBorderWidth: 0,
-                               activeStepColor: ContainerBlue,
-                               stepColor: ContainerBlue,
-                               lineColor: Colors.white,
-                               stepPadding: 0,
-                               lineLength: 10,
-                               icons: [
-                                 Icon(Icons.supervised_user_circle,color: Colors.white,size: 5,),
-                                 Icon(Icons.flag,color: Colors.white),
-                                 Icon(Icons.access_alarm,color: Colors.white),
-                               ],
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),*/
-                 ),
-
-                 const SizedBox(height: 10),
-
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                   children: [
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                         child:Text("Settings") ,),
-                     ),
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                         child:Text("Cancel Shuttle") ,),
-                     ),
-                   ],
-                 ),
-
-                 const SizedBox(height: 10),
-                 const Text("Requested by Room Guest- Sarthak Tiwary",
-                   style: TextStyle(fontWeight: FontWeight.bold),)
-               ],
-             ),
-           ),
-         ),
-
-         //---------------------------------------------------------------------
-         Padding(
-           padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
-           child: Container(
-             width: 380,
-             height: 394,
-             decoration: BoxDecoration(
-               color: ContainerWhite,
-               borderRadius: BorderRadius.circular(10),
-             ),
-             child: Column(
-               children: [
-                 //-------------------------------------------------------------
-                 Padding(
-                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                   child: Container(
-                     height: 138,
-                     width: 315,
-                     decoration: BoxDecoration(
-                       color: ContainerWhite,
-                       borderRadius: BorderRadius.circular(10),
-                     ),
-                     child:
-                     Row(
-                         mainAxisAlignment: MainAxisAlignment.start,
-                         children: [
-                           Padding(
-                               padding: const EdgeInsets.symmetric(horizontal: 20),
-                               child: Image.asset("assets/images/blue_cart.png")),
-                           Column(
-                             crossAxisAlignment: CrossAxisAlignment.start,
-                             children: [
-                               const SizedBox(height: 25),
-                               const Text("Green 6 seater",
-                                   style: TextStyle(
-                                       fontWeight: FontWeight.bold, fontSize: 16)),
-                               Padding(
-                                 padding:const EdgeInsets.symmetric(vertical: 5),
-                                 child: Row(
-                                     children:const[
-                                       Text("2 mins to end",
-                                           style: TextStyle(
-                                               color:Colors.blue,fontWeight: FontWeight.bold, fontSize: 20)),
-
-                                     ]
-                                 ),
-                               ),
-                               Container(
-                                 width: 117,
-                                 height: 27,
-                                 child: LinearPercentIndicator(
-                                   //width: MediaQuery.of(context).size.width - 50,
-                                   animation: true,
-                                   lineHeight: 25.0,
-                                   animationDuration: 2000,
-                                   percent: 0.6,
-                                   center: const Text("60%",
-                                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
-                                   linearStrokeCap: LinearStrokeCap.roundAll,
-                                   progressColor: Colors.green,
-                                 ),
-                               ),
-                               const SizedBox(height: 5),
-                               Row(
-                                   children: [
-                                     Text("18 ",
-                                       style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-                                     Column(
-                                         children:[
-                                           Padding(
-                                             padding: EdgeInsets.symmetric(vertical: 2),
-                                             child: Text("KM left",
-                                               style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                                           ),
-                                         ]
-                                     ),
-                                   ]
-                               ),
-                             ],
-                           ),
-                         ]
-                     ),
-                   ),
-                 ),
-                 //-------------------------------------------------------------
-
-                 Container(
-                   height: 160,
-                   width: 325,
-                   color:ContainerBlue,
-                   child:LocationInfo(),
-                   /* Stepper widget not working
-                       Column(
-                       children: [
-                         Padding(
-                           padding:EdgeInsets.symmetric(horizontal:10,vertical: 50),
-                           child: Transform.rotate(
-                             angle: 1.55,
-                             child: IconStepper(
-                               enableNextPreviousButtons: false,
-                               enableStepTapping: false,
-                               scrollingDisabled: true,
-                               activeStepBorderColor: ContainerBlue,
-                               activeStepBorderPadding: 0,
-                               activeStepBorderWidth: 0,
-                               activeStepColor: ContainerBlue,
-                               stepColor: ContainerBlue,
-                               lineColor: Colors.white,
-                               stepPadding: 0,
-                               lineLength: 10,
-                               icons: [
-                                 Icon(Icons.supervised_user_circle,color: Colors.white,size: 5,),
-                                 Icon(Icons.flag,color: Colors.white),
-                                 Icon(Icons.access_alarm,color: Colors.white),
-                               ],
-                             ),
-                           ),
-                         ),
-                       ],
-                     ),*/
-                 ),
-
-                 const SizedBox(height: 10),
-
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                   children: [
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                         child:Text("Settings") ,),
-                     ),
-                     Container(
-                       width: 156,
-                       height: 50,
-                       child: ElevatedButton(
-                         style: ElevatedButton.styleFrom(primary: ButtonColor),
-                         onPressed: (){},
-                         child:Text("Cancel Shuttle") ,),
-                     ),
-                   ],
-                 ),
-
-                 const SizedBox(height: 10),
-                 const Text("Requested by Room Guest- Sarthak Tiwary",
-                   style: TextStyle(fontWeight: FontWeight.bold),)
-               ],
-             ),
-           ),
-         ),
        ],
 
      ),
@@ -631,3 +172,315 @@ Widget LocationInfo2(){
   );
 }
 
+
+Widget InfoContainer1(){
+  return  Padding(
+    padding: EdgeInsets.symmetric(vertical:20,horizontal: 10),
+    child: Container(
+      width: 380,
+      height: 394,
+      decoration: BoxDecoration(
+        color: ContainerWhite,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          //-------------------------------------------------------------
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Container(
+              height: 138,
+              width: 315,
+              decoration: BoxDecoration(
+                color: ContainerWhite,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child:
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Image.asset("assets/images/blue_cart.png")),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 25),
+                        const Text("Green 6 seater",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16)),
+                        Padding(
+                          padding:const EdgeInsets.symmetric(vertical: 5),
+                          child: Row(
+                              children:const[
+                                Text("2 mins to end",
+                                    style: TextStyle(
+                                        color:Colors.blue,fontWeight: FontWeight.bold, fontSize: 20)),
+
+                              ]
+                          ),
+                        ),
+                        Container(
+                          width: 117,
+                          height: 27,
+                          child: LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 25.0,
+                            animationDuration: 2000,
+                            percent: 0.6,
+                            center: const Text("60%",
+                                style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.green,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Row(
+                            children: [
+                              const Text("18 ",
+                                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                              Column(
+                                  children:const [
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(vertical: 2),
+                                      child: Text("KM left",
+                                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                                    ),
+                                  ]
+                              ),
+                            ]
+                        ),
+                      ],
+                    ),
+                  ]
+              ),
+            ),
+          ),
+          //-------------------------------------------------------------
+
+          Container(
+            height: 160,
+            width: 325,
+            color:ContainerBlue,
+            child:LocationInfo(),
+            /* Stepper widget not working
+                       Column(
+                       children: [
+                         Padding(
+                           padding:EdgeInsets.symmetric(horizontal:10,vertical: 50),
+                           child: Transform.rotate(
+                             angle: 1.55,
+                             child: IconStepper(
+                               enableNextPreviousButtons: false,
+                               enableStepTapping: false,
+                               scrollingDisabled: true,
+                               activeStepBorderColor: ContainerBlue,
+                               activeStepBorderPadding: 0,
+                               activeStepBorderWidth: 0,
+                               activeStepColor: ContainerBlue,
+                               stepColor: ContainerBlue,
+                               lineColor: Colors.white,
+                               stepPadding: 0,
+                               lineLength: 10,
+                               icons: [
+                                 Icon(Icons.supervised_user_circle,color: Colors.white,size: 5,),
+                                 Icon(Icons.flag,color: Colors.white),
+                                 Icon(Icons.access_alarm,color: Colors.white),
+                               ],
+                             ),
+                           ),
+                         ),
+                       ],
+                     ),*/
+          ),
+
+          const SizedBox(height: 10),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 156,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: ButtonColor),
+                  onPressed: (){},
+                  child:const Text("Settings") ,),
+              ),
+              Container(
+                width: 156,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: ButtonColor),
+                  onPressed: (){},
+                  child:const Text("Cancel Shuttle") ,),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 10),
+          const Text("Requested by Room Guest- Sarthak Tiwary",
+            style: TextStyle(fontWeight: FontWeight.bold),)
+        ],
+      ),
+    ),
+  );
+}
+
+Widget InfoContainer2(){
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+    child: Container(
+      width: 380,
+      height: 394,
+      decoration: BoxDecoration(
+        color: ContainerWhite,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          //-------------------------------------------------------------
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Container(
+              height: 138,
+              width: 315,
+              decoration: BoxDecoration(
+                color: ContainerWhite,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child:
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Image.asset("assets/images/red_cart.png.png")),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 15),
+                        const Text("Red 4 seater",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16)),
+                        Padding(
+                          padding:const EdgeInsets.symmetric(vertical: 5),
+                          child: Row(
+                              children:const[
+                                Text("2 mins to end",
+                                    style: TextStyle(
+                                        color:Colors.blue,fontWeight: FontWeight.bold, fontSize: 20)),
+
+                              ]
+                          ),
+                        ),
+                        Container(
+                          width: 117,
+                          height: 27,
+                          child: LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 25.0,
+                            animationDuration: 2000,
+                            percent: 0.6,
+                            center: const Text("60%",
+                                style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold)),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.green,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                              children: [
+                                const Text("18 ",
+                                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                Column(
+                                    children:const [
+                                      Padding(
+                                        padding: EdgeInsets.symmetric(vertical: 2),
+                                        child: Text("KM left",
+                                          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                                      ),
+                                    ]
+                                ),
+                              ]
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]
+              ),
+            ),
+          ),
+          //-------------------------------------------------------------
+
+          Container(
+            height: 160,
+            width: 325,
+            color:ContainerBlue,
+            child:LocationInfo2(),
+            /* Stepper widget not working
+                       Column(
+                       children: [
+                         Padding(
+                           padding:EdgeInsets.symmetric(horizontal:10,vertical: 50),
+                           child: Transform.rotate(
+                             angle: 1.55,
+                             child: IconStepper(
+                               enableNextPreviousButtons: false,
+                               enableStepTapping: false,
+                               scrollingDisabled: true,
+                               activeStepBorderColor: ContainerBlue,
+                               activeStepBorderPadding: 0,
+                               activeStepBorderWidth: 0,
+                               activeStepColor: ContainerBlue,
+                               stepColor: ContainerBlue,
+                               lineColor: Colors.white,
+                               stepPadding: 0,
+                               lineLength: 10,
+                               icons: [
+                                 Icon(Icons.supervised_user_circle,color: Colors.white,size: 5,),
+                                 Icon(Icons.flag,color: Colors.white),
+                                 Icon(Icons.access_alarm,color: Colors.white),
+                               ],
+                             ),
+                           ),
+                         ),
+                       ],
+                     ),*/
+          ),
+
+          const SizedBox(height: 10),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 156,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: ButtonColor),
+                  onPressed: (){},
+                  child:const Text("Settings") ,),
+              ),
+              Container(
+                width: 156,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: ButtonColor),
+                  onPressed: (){},
+                  child:const Text("Cancel Shuttle") ,),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 10),
+          const Text("Requested by Front office",
+            style: TextStyle(fontWeight: FontWeight.bold),)
+        ],
+      ),
+    ),
+  );
+}
