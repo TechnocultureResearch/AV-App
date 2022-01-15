@@ -49,7 +49,7 @@ Login page(Staff)
 
 
 
-Dashboard Page
+ - Dashboard Page
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard1.jpg" width=200 />
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard%202.jpg" width=200 />
 
