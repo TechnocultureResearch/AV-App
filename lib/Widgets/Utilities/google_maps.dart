@@ -1,6 +1,8 @@
-/* Google map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
+/*Google map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
    Google map Key - android > app > src>main > AndroidManifest.xml (Line no 42)
    Google service - android > build.gradle (Line 10)
+
+   In the AndroidManifest.xml (Line no 42)...add API key to get google maps feature.Presently the key removed.
 */
 
 
