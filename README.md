@@ -39,6 +39,9 @@ Run this command
 - flutter run
 ```
 
+# Issues
+- Map rendering not working properly
+
 
 # Pages Images
 
