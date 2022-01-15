@@ -40,7 +40,17 @@ Run this command
 ```
 
 # Issues
-- Map rendering not working properly
+ - Map rendering not working properly
+
+ - Map requires google play services for functioning.
+  <img src="https://github.com/TechnocultureResearch/AV-App/blob/4836ef9be60a93e14d96469bf79fdb40f385dd32/assets/Screenshots/map_issue.png" width=200 />
+  
+#Flutter maps Permission details
+
+ - Flutter map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
+ - Flutter map API Key - android > app > src>main > AndroidManifest.xml (Line no 42)
+ - Google service - android > build.gradle (Line 10)
+ - In the AndroidManifest.xml (Line no 42)...add API key to get Flutter maps features.Presently the key removed is removed.
 
 
 # Pages Images
