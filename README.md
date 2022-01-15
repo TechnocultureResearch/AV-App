@@ -50,7 +50,9 @@ Run this command
  - Flutter map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
  - Flutter map API Key - android > app > src>main > AndroidManifest.xml (Line no 42)
  - Google service - android > build.gradle (Line 10)
+ - Refer [location](https://pub.dev/packages/location) and [flutter maps](https://pub.dev/packages/google_maps_flutter) packages to see permission and AndroidManifest.xml changes in detail.
  - In the AndroidManifest.xml (Line no 42)...add API key to get Flutter maps features.Presently the key removed is removed.
+ - Refer the [link](https://www.youtube.com/watch?v=2_HZObVbe-g&t=0s) for API fetching.
 
 
 # Pages Images
