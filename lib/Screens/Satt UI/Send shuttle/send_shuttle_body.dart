@@ -13,6 +13,7 @@ class SendShuttleBody extends StatefulWidget{
 
 class _SendShuttleBody extends State<SendShuttleBody>{
   String dropdownValue;
+  String dropdownValue2;
   @override
   Widget build(BuildContext context) {
     var height = SizeConfig.getHeight(context);
@@ -83,14 +84,14 @@ class _SendShuttleBody extends State<SendShuttleBody>{
                           child: Text(value),
                         );
                       }).toList(),
-                      value: dropdownValue,
+                      value: dropdownValue2,
                       hint: const Padding(
                           padding:EdgeInsets.symmetric(horizontal: 10,vertical: 15) ,
                           child:Text("Set an Arrival Location?")),
                       searchHint: "Set an Arrival Location?",
                       onChanged:  (String newValue) {
                         setState(() {
-                          dropdownValue = newValue;
+                          dropdownValue2 = newValue;
                         });
                       },
                       isExpanded: true,
