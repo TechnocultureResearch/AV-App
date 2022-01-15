@@ -45,7 +45,7 @@ Run this command
  - Map requires google play services for functioning.
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/4836ef9be60a93e14d96469bf79fdb40f385dd32/assets/Screenshots/map_issue.png" width=200 />
   
-#Flutter maps Permission details
+# Flutter maps Permission details
 
  - Flutter map permissions - android > app > src>main > AndroidManifest.xml (Line no 4-6)
  - Flutter map API Key - android > app > src>main > AndroidManifest.xml (Line no 42)
