@@ -47,7 +47,7 @@ Login page(Staff)
 - Login Page  
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/dd097f6f0f1e9a5cf302a572ae29e2ed9f06f72c/assets/Screenshots/Login_page.png" width=200 />
 
-- Dashboard Page
+Dashboard Page
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard1.jpg" width=200 />
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard%202.jpg" width=200 />
 
