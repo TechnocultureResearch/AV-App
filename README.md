@@ -53,6 +53,10 @@ Login page(Staff)
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard1.jpg" width=200 />
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/5888feab174a4680c2103150dee01bc0dc2ae82d/assets/Screenshots/dashboard%202.jpg" width=200 />
 
+- Manage Fleet Page
+  <img src="https://github.com/TechnocultureResearch/AV-App/blob/eb82f4f979bc31ec6341d04b0b89eb10dcf45e6b/assets/Screenshots/manage_fleet1.jpg" width=200 />
+  <img src="https://github.com/TechnocultureResearch/AV-App/blob/eb82f4f979bc31ec6341d04b0b89eb10dcf45e6b/assets/Screenshots/manage_fleet2.jpg" width=200 />
+
 
 
 ## Documentation
