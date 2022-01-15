@@ -15,9 +15,9 @@ class _HomePageState extends State<HomePage> {
 
   final _pageOptions = [
     StaffDashboard(),
-    StaffDashboard(),// Import page for bookings
+    StaffDashboard(),// Import page for bookings here
     ManageFleet(),
-    StaffDashboard(),  // Import page for Settings
+    StaffDashboard(),  // Import page for Settings here
 
   ];
 
