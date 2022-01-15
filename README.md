@@ -60,9 +60,9 @@ Login page(Staff)
  - Send shuttle Page
   <img src="https://github.com/TechnocultureResearch/AV-App/blob/933df9d9b139793dfbcd77a829dcc879a39e3fe7/assets/Screenshots/send_shuttle.png" width=200 />
  
- - Track shuttle
-   <img src="https://github.com/TechnocultureResearch/AV-App/blob/933df9d9b139793dfbcd77a829dcc879a39e3fe7/assets/Screenshots/track_shuttle1.jpg" width=200 />
-   <img src="https://github.com/TechnocultureResearch/AV-App/blob/933df9d9b139793dfbcd77a829dcc879a39e3fe7/assets/Screenshots/track_shuttle2.jpg" width=200 />
+ - Track shuttle page
+  <img src="https://github.com/TechnocultureResearch/AV-App/blob/933df9d9b139793dfbcd77a829dcc879a39e3fe7/assets/Screenshots/track_shuttle1.jpg" width=200 />
+  <img src="https://github.com/TechnocultureResearch/AV-App/blob/933df9d9b139793dfbcd77a829dcc879a39e3fe7/assets/Screenshots/track_shuttle2.jpg" width=200 />
   
 
 
