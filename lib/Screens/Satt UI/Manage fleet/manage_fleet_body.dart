@@ -1,4 +1,5 @@
 import 'package:av_model/Widgets/Constants/colors.dart';
+import 'package:av_model/Widgets/Constants/size.dart';
 import 'package:av_model/Widgets/Utilities/google_maps.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -11,13 +12,19 @@ class ManageFleetBody extends StatefulWidget{
 class _ManageFleetBody extends State<ManageFleetBody> {
   @override
   Widget build(BuildContext context) {
-   return SingleChildScrollView(
-     child: Column(
-       children: [
-         ContainerDetails1(),
-         ContainerDetails2(),
-         ContainerDetails1(),
-       ],
+    var height = SizeConfig.getHeight(context);
+    var width = SizeConfig.getWidth(context);
+   return Container(
+     height: height,
+     width: width,
+     child: SingleChildScrollView(
+       child: Column(
+         children: [
+           ContainerDetails1(),
+           ContainerDetails2(),
+           ContainerDetails1(),
+         ],
+       ),
      ),
    );
   }

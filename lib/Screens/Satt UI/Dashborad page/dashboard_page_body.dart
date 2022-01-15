@@ -2,6 +2,7 @@ import 'package:av_model/Screens/Satt%20UI/Manage%20fleet/manage_fleet.dart';
 import 'package:av_model/Screens/Satt%20UI/Send%20shuttle/send_shuttle.dart';
 import 'package:av_model/Screens/Satt%20UI/Track%20shuttle/track_shuttle.dart';
 import 'package:av_model/Widgets/Constants/colors.dart';
+import 'package:av_model/Widgets/Constants/size.dart';
 import 'package:av_model/Widgets/Utilities/google_maps.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -16,54 +17,60 @@ class DashboardBody extends StatefulWidget {
 class _DashboardBody extends State<DashboardBody> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          const SizedBox(height: 10),
-          _shuttleList1(),
+    var height = SizeConfig.getHeight(context);
+    var width = SizeConfig.getWidth(context);
+    return  Container(
+        height: height,
+        width:  width,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(height: 10),
+              _shuttleList1(),
 
 
-          const SizedBox(height: 20),
-          _ShuttleList2(),
+              const SizedBox(height: 20),
+              _ShuttleList2(),
 
-          const SizedBox(height: 20),
-          FleetManagement(),
+              const SizedBox(height: 20),
+              FleetManagement(),
 
 
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 20,horizontal: 25),
-            child: Container(
-              height: 217 ,
-              width: 214,
-              decoration: BoxDecoration(
-                color: ContainerWhite,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
-                    child: Text("View reviews",
-                    style: TextStyle(fontSize: 16),),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20,horizontal: 25),
+                child: Container(
+                  height: 217 ,
+                  width: 214,
+                  decoration: BoxDecoration(
+                    color: ContainerWhite,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
+                        child: Text("View reviews",
+                        style: TextStyle(fontSize: 16),),
+                      ),
+
+                      Container(
+                        height: 140,
+                          width: 190,
+                          child:const  _BarChart()),
+                    ],
                   ),
 
-                  Container(
-                    height: 140,
-                      width: 190,
-                      child:const  _BarChart()),
-                ],
+                ),
               ),
 
-            ),
+
+            ],
           ),
-
-
-        ],
-      ),
-    );
+        ),
+      );
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:av_model/Widgets/Constants/colors.dart';
+import 'package:av_model/Widgets/Constants/size.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 //import 'package:im_stepper/stepper.dart';
@@ -13,18 +14,24 @@ class _TrackShuttleBody extends State<TrackShuttleBody>{
   int activeStep = 1;
   @override
   Widget build(BuildContext context) {
-   return SingleChildScrollView(
-     child: Column(
-       crossAxisAlignment: CrossAxisAlignment.center,
-       children: [
-         InfoContainer1(),
-         InfoContainer2(),
-         InfoContainer1(),
+    var height = SizeConfig.getHeight(context);
+    var width = SizeConfig.getWidth(context);
+   return Container(
+       height: height,
+       width: width,
+       child: SingleChildScrollView(
+         child: Column(
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [
+             InfoContainer1(),
+             InfoContainer2(),
+             InfoContainer1(),
 
-       ],
+           ],
 
-     ),
-   );
+         ),
+       ),
+     );
   }
 }
 
